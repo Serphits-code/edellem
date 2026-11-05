@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>Para Edellem Maria ♥ — Just The Way You Are</title>
+
+  <!-- Google Fonts: Handwritten & Sketch Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Patrick+Hand&family=Architects+Daughter&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles.css?v=3" />
+</head>
+<body>
+  <!-- Hidden SVG Filters for Hand-Drawn 2D Frame-by-Frame Ink Boil Effect -->
+  <svg class="svg-defs" aria-hidden="true" width="0" height="0">
+    <defs>
+      <filter id="sketch-boil-0" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="1" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.7" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="sketch-boil-1" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="7" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.9" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+      <filter id="sketch-boil-2" x="-10%" y="-10%" width="120%" height="120%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="3" seed="14" result="noise" />
+        <feDisplacementMap in="SourceGraphic" in2="noise" scale="1.6" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Main Mobile-First Viewport Stage -->
+  <main class="stage" id="stage">
+
+    <!-- Background & Perimeter Hand-Drawn Doodles (Beat-Reactive, Always Visible Around Player) -->
+    <div class="ambient-doodles" id="ambientDoodles" aria-hidden="true">
+      <!-- Top Left: Double Eighth Note & Sparkle -->
+      <svg class="doodle doodle-tl" viewBox="0 0 90 90" fill="none">
+        <path class="draw-path" d="M26 62 C26 68, 15 70, 14 63 C13 56, 24 54, 26 60 L28 24 C42 22, 54 18, 62 15 L60 52 C60 59, 49 61, 48 54 C47 47, 58 45, 60 51" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M28 32 C41 29, 51 26, 61 23" stroke="#111" stroke-width="2.2" stroke-linecap="round" />
+        <path class="draw-path" d="M12 36 Q18 30 22 35" stroke="#111" stroke-width="1.8" stroke-linecap="round" />
+        <path class="draw-path" d="M72 30 L76 30 M74 28 L74 32" stroke="#111" stroke-width="2" stroke-linecap="round" />
+      </svg>
+
+      <!-- Top Center: Floating Romantic Hearts & Sound Wave -->
+      <svg class="doodle doodle-tc" viewBox="0 0 140 50" fill="none">
+        <path class="draw-path" d="M70 38 C70 38, 54 27, 54 17 C54 11, 59 8, 64 8 C67 8, 69 10, 70 13 C71 10, 73 8, 76 8 C81 8, 86 11, 86 17 C86 27, 70 38, 70 38 Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M44 14 Q38 23 44 32" stroke="#111" stroke-width="1.8" stroke-linecap="round" />
+        <path class="draw-path" d="M37 10 Q29 23 37 36" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+        <path class="draw-path" d="M96 14 Q102 23 96 32" stroke="#111" stroke-width="1.8" stroke-linecap="round" />
+        <path class="draw-path" d="M103 10 Q111 23 103 36" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+      </svg>
+
+      <!-- Top Right: 4-Point Star Sparkle & Sketch Heart -->
+      <svg class="doodle doodle-tr" viewBox="0 0 90 90" fill="none">
+        <path class="draw-path" d="M45 12 Q47 32 67 34 Q47 36 45 56 Q43 36 23 34 Q43 32 45 12 Z" stroke="#111" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M68 58 C68 53, 61 50, 58 55 C55 50, 48 53, 48 58 C48 65, 58 70, 58 73 C58 70, 68 65, 68 58 Z" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M20 62 L26 62 M23 59 L23 65" stroke="#111" stroke-width="2" stroke-linecap="round" />
+      </svg>
+
+      <!-- Mid-Upper Left: Beating Heart with Sound Waves -->
+      <svg class="doodle doodle-ml" viewBox="0 0 80 120" fill="none">
+        <path class="draw-path" d="M44 46 C44 37, 32 33, 27 42 C22 33, 10 37, 10 46 C10 59, 27 68, 27 74 C27 68, 44 59, 44 46 Z" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path wave-arc-1" d="M51 38 Q60 52 51 66" stroke="#111" stroke-width="2" stroke-linecap="round" />
+        <path class="draw-path wave-arc-2" d="M58 32 Q69 52 58 72" stroke="#111" stroke-width="1.7" stroke-linecap="round" />
+        <path class="draw-path" d="M16 94 Q26 85 36 94 Q46 103 56 94" stroke="#111" stroke-width="2" stroke-linecap="round" />
+      </svg>
+
+      <!-- Mid-Upper Right: Eighth Note & Starburst -->
+      <svg class="doodle doodle-mr" viewBox="0 0 80 120" fill="none">
+        <path class="draw-path" d="M38 72 C38 79, 25 81, 24 73 C23 66, 35 64, 38 70 L40 26 C50 31, 58 39, 55 50" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M19 38 Q11 52 19 66" stroke="#111" stroke-width="2" stroke-linecap="round" />
+        <path class="draw-path" d="M12 32 Q2 52 12 72" stroke="#111" stroke-width="1.7" stroke-linecap="round" />
+        <path class="draw-path" d="M48 88 Q50 98 60 100 Q50 102 48 112 Q46 102 36 100 Q46 98 48 88 Z" stroke="#111" stroke-width="2" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Mid-Lower Left: Treble Swirl & Mini Heart -->
+      <svg class="doodle doodle-mll" viewBox="0 0 70 90" fill="none">
+        <path class="draw-path" d="M36 14 C22 22, 18 42, 34 48 C48 53, 46 72, 30 74 C20 75, 16 66, 24 62 C30 59, 34 66, 28 70" stroke="#111" stroke-width="2.2" stroke-linecap="round" fill="none" />
+        <path class="draw-path" d="M34 10 L32 82" stroke="#111" stroke-width="1.8" stroke-linecap="round" />
+      </svg>
+
+      <!-- Mid-Lower Right: Double Heart Sketch -->
+      <svg class="doodle doodle-mlr" viewBox="0 0 70 90" fill="none">
+        <path class="draw-path" d="M35 54 C35 54, 15 41, 15 28 C15 20, 22 16, 28 16 C32 16, 34 19, 35 22 C36 19, 38 16, 42 16 C48 16, 55 20, 55 28 C55 41, 35 54, 35 54 Z" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M46 76 C46 76, 36 69, 36 62 C36 58, 39 56, 42 56 C44 56, 45 57, 46 59 C47 57, 48 56, 50 56 C53 56, 56 58, 56 62 C56 69, 46 76, 46 76 Z" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Bottom Left: Mini Cassette Doodle -->
+      <svg class="doodle doodle-bl" viewBox="0 0 100 70" fill="none">
+        <path class="draw-path" d="M14 18 L82 16 L84 54 L12 56 Z" stroke="#111" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+        <circle class="draw-path" cx="34" cy="36" r="7" stroke="#111" stroke-width="2" />
+        <circle class="draw-path" cx="62" cy="35" r="7" stroke="#111" stroke-width="2" />
+        <path class="draw-path" d="M26 55 L31 46 L65 45 L70 54" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Bottom Center: Heartbeat Wave & Star -->
+      <svg class="doodle doodle-bc" viewBox="0 0 150 44" fill="none">
+        <path class="draw-path" d="M12 24 L50 24 L57 14 L64 34 L73 8 L82 36 L89 19 L95 27 L101 24 L138 24" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+
+      <!-- Bottom Right: Romantic Paper Plane & Swirl Heart -->
+      <svg class="doodle doodle-br" viewBox="0 0 100 70" fill="none">
+        <path class="draw-path" d="M18 36 L82 14 L56 58 L44 41 L18 36 Z" stroke="#111" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M82 14 L44 41 L43 55" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" />
+        <path class="draw-path" d="M12 52 Q24 62 34 50" stroke="#111" stroke-width="1.8" stroke-dasharray="3 4" stroke-linecap="round" />
+      </svg>
+
+      <!-- Floating Dynamic Beat Particles Container -->
+      <div class="beat-particles" id="beatParticles"></div>
+    </div>
+
+    <!-- =====================================================
+         PHASE 1: HANDWRITTEN INTRO SCREEN
+         ===================================================== -->
+    <section class="intro-screen" id="introScreen" aria-label="Introdução escrita à mão">
+      <div class="intro-notebook">
+        <!-- Decorative Top Sketch Heart Flourish -->
+        <svg class="intro-flourish" viewBox="0 0 180 42" fill="none">
+          <path class="intro-flourish-path" d="M18 24 Q55 24 74 20 C74 12, 84 8, 90 16 C96 8, 106 12, 106 20 Q125 24 162 24" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <!-- Handwritten Lines Container -->
+        <div class="handwriting-area" id="handwritingArea">
+          <p class="hw-line" id="hwLine0"><span class="hw-text"></span></p>
+          <p class="hw-line" id="hwLine1"><span class="hw-text"></span></p>
+          <p class="hw-line" id="hwLine2"><span class="hw-text"></span></p>
+          <p class="hw-line hw-line-highlight" id="hwLine3">
+            <span class="hw-text"></span>
+            <svg class="hw-underline" id="hwUnderline" viewBox="0 0 220 16" fill="none" preserveAspectRatio="none">
+              <path d="M4 9 Q110 3 216 10 M12 13 Q115 8 204 12" stroke="#111" stroke-width="2.2" stroke-linecap="round" />
+            </svg>
+          </p>
+
+          <!-- Floating Pen Nib that follows the active letter -->
+          <div class="pen-cursor" id="penCursor" aria-hidden="true">
+            <svg viewBox="0 0 36 36" width="28" height="28" fill="none">
+              <path d="M4 32 L11 19 L25 5 C27 3, 30 3, 32 5 C34 7, 34 10, 32 12 L18 26 L4 32 Z" stroke="#111" stroke-width="2" fill="#fff" stroke-linejoin="round" />
+              <path d="M11 19 L18 26 M4 32 L9 27" stroke="#111" stroke-width="1.6" stroke-linecap="round" />
+            </svg>
+          </div>
+        </div>
+
+        <!-- Hand-Drawn Play Button (Appears after text finishes writing) -->
+        <div class="intro-play-wrapper" id="introPlayWrapper">
+          <button class="sketch-play-btn" id="introPlayBtn" type="button" aria-label="Dar play na música">
+            <svg class="sketch-play-svg" viewBox="0 0 120 120" fill="none">
+              <!-- Outer pulsing sketch ring -->
+              <path class="play-ring-outer" d="M60 8 C90 7, 112 30, 111 60 C110 91, 88 113, 59 112 C29 111, 8 89, 9 59 C10 28, 32 9, 60 8 Z" stroke="#111" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="6 5" />
+              <!-- Primary sketchy circle stroke 1 -->
+              <path class="play-circle-1" d="M60 15 C86 14, 105 34, 105 60 C105 86, 85 106, 59 105 C33 104, 14 85, 15 59 C16 33, 35 16, 60 15 Z" stroke="#111" stroke-width="3" stroke-linecap="round" />
+              <!-- Secondary sketchy circle stroke 2 (hand-drawn double line) -->
+              <path class="play-circle-2" d="M58 17 C84 18, 103 36, 103 61 C102 85, 83 103, 58 103 C34 103, 17 83, 17 58 C17 35, 36 17, 62 17" stroke="#111" stroke-width="1.6" stroke-linecap="round" />
+              <!-- Hand-drawn Play Triangle -->
+              <path class="play-triangle" d="M48 41 C48 39, 50 39, 52 40 L79 58 C81 59, 81 61, 79 62 L51 80 C49 81, 47 80, 47 78 L48 41 Z" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+              <!-- Sketch shading inside triangle -->
+              <path class="play-triangle-shade" d="M51 46 L72 60 L51 73" stroke="#111" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="intro-play-hint">toque para dar play</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================
+         PHASE 2 & 3: SPOTIFY-STYLE HAND-DRAWN MUSIC PLAYER
+         ===================================================== -->
+    <section class="player-screen" id="playerScreen" aria-label="Player de Música">
+      <div class="player-card" id="playerCard">
+        <!-- Hand-Drawn Card Border SVG that sketches itself in -->
+        <svg class="card-border-svg" viewBox="0 0 380 650" preserveAspectRatio="none" fill="none" aria-hidden="true">
+          <path class="card-stroke-1" d="M18 10 C120 7, 260 9, 362 11 C370 11, 373 16, 373 24 C375 220, 372 430, 373 626 C373 635, 368 640, 359 640 C250 643, 130 641, 20 639 C11 639, 7 634, 7 625 C6 420, 9 210, 7 23 C7 15, 11 10, 18 10 Z" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+          <path class="card-stroke-2" d="M22 13 C130 11, 255 12, 358 14 C366 14, 370 19, 370 28 C371 225, 369 435, 370 622 C370 631, 365 636, 356 637 C245 639, 125 638, 22 636 C14 636, 10 630, 10 621 C9 415, 11 215, 10 26 C10 18, 15 13, 22 13 Z" stroke="#111" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <!-- 1. Spotify Top Header -->
+        <header class="player-header construct-item" style="--step: 1">
+          <button class="icon-btn" id="replayIntroBtn" type="button" title="Rever mensagem inicial" aria-label="Rever mensagem inicial">
+            <svg viewBox="0 0 28 28" width="24" height="24" fill="none">
+              <path class="stroke-draw" d="M6 10 L14 18 L22 10" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <div class="header-titles">
+            <span class="header-kicker">FEITO COM CARINHO</span>
+            <h1 class="header-dedication">
+              Para Edellem Maria
+              <svg class="mini-inline-heart" viewBox="0 0 20 20" width="14" height="14" fill="none">
+                <path d="M10 17 C10 17, 3 12, 3 7 C3 4.5, 5 3, 7 3 C8.5 3, 9.5 4, 10 5 C10.5 4, 11.5 3, 13 3 C15 3, 17 4.5, 17 7 C17 12, 10 17, 10 17 Z" stroke="#111" stroke-width="2" fill="#111" stroke-linejoin="round" />
+              </svg>
+            </h1>
+          </div>
+
+          <button class="icon-btn" id="jumpHeartbeatBtn" type="button" title="Ir para batidas do coração (00:25)" aria-label="Ir para batidas do coração 00:25">
+            <svg viewBox="0 0 28 28" width="24" height="24" fill="none">
+              <circle cx="7" cy="14" r="1.8" fill="#111" />
+              <circle cx="14" cy="14" r="1.8" fill="#111" />
+              <circle cx="21" cy="14" r="1.8" fill="#111" />
+            </svg>
+          </button>
+        </header>
+
+        <!-- 2. Album Art Cover Frame (Heart 00:00-00:33 -> Video 00:33+) -->
+        <div class="cover-wrapper construct-item" style="--step: 2">
+          <!-- Surrounding Cover Rhythm Doodles (Hug the cover corners & pulse on beat) -->
+          <div class="cover-corner-doodles" aria-hidden="true">
+            <svg class="corner-doodle corner-tl" viewBox="0 0 40 40" fill="none">
+              <path d="M8 28 C8 16, 16 8, 28 8" stroke="#111" stroke-width="2" stroke-linecap="round" />
+              <path d="M4 22 C4 12, 12 4, 22 4" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <svg class="corner-doodle corner-tr" viewBox="0 0 40 40" fill="none">
+              <path d="M12 8 C24 8, 32 16, 32 28" stroke="#111" stroke-width="2" stroke-linecap="round" />
+              <path d="M18 4 C28 4, 36 12, 36 22" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+            <svg class="corner-doodle corner-bl" viewBox="0 0 40 40" fill="none">
+              <path d="M8 12 C8 24, 16 32, 28 32" stroke="#111" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <svg class="corner-doodle corner-br" viewBox="0 0 40 40" fill="none">
+              <path d="M32 12 C32 24, 24 32, 12 32" stroke="#111" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+
+          <div class="cover-box" id="coverBox">
+            <!-- Hand-Drawn Sketchy Frame Around Cover -->
+            <svg class="cover-frame-svg" viewBox="0 0 320 320" preserveAspectRatio="none" fill="none" aria-hidden="true">
+              <path class="cover-frame-path-1" d="M8 10 C105 6, 215 8, 312 9 C314 105, 312 215, 311 311 C210 314, 110 312, 9 310 C7 210, 9 110, 8 10 Z" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+              <path class="cover-frame-path-2" d="M12 6 C110 10, 210 7, 315 12 C311 110, 315 210, 308 314 C205 310, 105 314, 6 307 C11 205, 7 105, 12 6 Z" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            <!-- STAGE A: Hand-Drawn Cassette Heart Cover (00:00 to 00:33) -->
+            <div class="cover-heart-stage" id="coverHeartStage">
+              <!-- Shockwave Rings (Trigger on 00:25 - 00:33 beats) -->
+              <div class="heart-shockwaves" id="heartShockwaves" aria-hidden="true"></div>
+
+              <!-- Central Hand-Drawn Cassette Tape Heart SVG -->
+              <svg class="central-heart-svg" id="centralHeartSvg" viewBox="0 0 260 260" fill="none">
+                <!-- Radiating Beat Lines around the Heart (visible on pulses) -->
+                <g class="heart-burst-rays" id="heartBurstRays">
+                  <line x1="130" y1="22" x2="130" y2="8" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="195" y1="42" x2="208" y2="30" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="228" y1="100" x2="244" y2="96" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="205" y1="168" x2="219" y2="180" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="65" y1="42" x2="52" y2="30" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="32" y1="100" x2="16" y2="96" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                  <line x1="55" y1="168" x2="41" y2="180" stroke="#111" stroke-width="2.4" stroke-linecap="round" />
+                </g>
+
+                <!-- Cassette Tape Ribbon Unspooling into Heart Shape -->
+                <path class="cassette-ribbon-lead" d="M32 222 C62 218, 92 226, 114 206 C123 198, 128 190, 130 184" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="4 3" />
+                <path class="cassette-ribbon-tail" d="M130 184 C136 196, 152 216, 185 220 C206 222, 220 215, 232 221" stroke="#111" stroke-width="1.8" stroke-linecap="round" />
+
+                <!-- Primary Hand-Drawn Heart Contour (Thick Ink Pen) -->
+                <path class="heart-main-stroke" d="M130 184 C130 184, 54 136, 54 85 C54 57, 76 42, 98 42 C114 42, 125 52, 130 65 C135 52, 146 42, 162 42 C184 42, 206 57, 206 85 C206 136, 130 184, 130 184 Z" stroke="#111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+
+                <!-- Second Overlapping Sketchy Loop (Cassette Tape Multiple Strands) -->
+                <path class="heart-second-stroke" d="M130 179 C126 176, 59 132, 58 87 C57 61, 78 46, 100 47 C115 48, 125 57, 130 69 C136 56, 147 46, 160 46 C181 46, 202 60, 201 87 C200 133, 134 176, 130 179 Z" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+
+                <!-- Third Loose Scribble Ribbon Stroke (Bruno Mars Cassette Tape style) -->
+                <path class="heart-third-stroke" d="M130 188 C118 178, 49 135, 51 83 C53 53, 75 38, 101 40 C116 41, 126 51, 130 62 C135 50, 146 39, 164 40 C188 41, 210 57, 209 86 C208 138, 140 179, 130 188 Z" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 4" />
+
+                <!-- Hand-drawn Sketch Hatching Lines inside the Heart -->
+                <g class="heart-hatching" opacity="0.75">
+                  <path d="M72 72 L64 88 M82 62 L68 96 M94 58 L76 102" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+                  <path d="M182 68 L192 88 M172 60 L188 98 M162 58 L180 104" stroke="#111" stroke-width="1.5" stroke-linecap="round" />
+                </g>
+
+                <!-- Inner Mini Pulse Heart (Appears & Beats Strongly 00:25 - 00:33) -->
+                <path class="heart-inner-core" id="heartInnerCore" d="M130 144 C130 144, 92 118, 92 92 C92 77, 103 69, 114 69 C122 69, 127 74, 130 81 C133 74, 138 69, 146 69 C157 69, 168 77, 168 92 C168 118, 130 144, 130 144 Z" stroke="#111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+                <!-- ECG Heartbeat Line Across Bottom of Heart Stage -->
+                <path class="ecg-line" id="ecgLine" d="M24 205 L88 205 L98 195 L108 216 L120 174 L132 224 L143 188 L152 210 L160 205 L236 205" stroke="#111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+
+            <!-- STAGE B: Looping Hand-Drawn Video Cover (Reveals at 00:33 "Oh, her eyes...") -->
+            <div class="cover-video-stage" id="coverVideoStage">
+              <video
+                id="coverVideo"
+                class="cover-video"
+                src="/api/media/video"
+                loop
+                muted
+                playsinline
+                webkit-playsinline
+                preload="auto"
+              ></video>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Hand-Drawn Rhythm Equalizer Doodles Bar -->
+        <div class="sketch-eq-row construct-item" style="--step: 3" id="sketchEqRow" aria-hidden="true">
+          <span class="eq-doodle-note">♪</span>
+          <div class="sketch-eq-bars" id="sketchEqBars">
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+            <span class="eq-bar"></span>
+          </div>
+          <span class="eq-doodle-note">♫</span>
+        </div>
+
+        <!-- 4. Spotify Track Info & Like Heart -->
+        <div class="track-info-row construct-item" style="--step: 4">
+          <div class="track-text">
+            <div class="track-title-wrap">
+              <h2 class="track-title">Just the way you are</h2>
+            </div>
+            <p class="track-artist">
+              <span>Bruno Mars</span>
+              <span class="artist-dot">•</span>
+              <span class="artist-dedication">Para Edellem Maria ♥</span>
+            </p>
+          </div>
+
+          <button class="like-heart-btn is-liked" id="likeHeartBtn" type="button" aria-label="Favoritar música">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+              <path class="like-heart-path" d="M16 26 C16 26, 5 18.5, 5 11 C5 7.2, 8 4.8, 11.2 4.8 C13.4 4.8, 15.1 6.1, 16 7.8 C16.9 6.1, 18.6 4.8, 20.8 4.8 C24 4.8, 27 7.2, 27 11 C27 18.5, 16 26, 16 26 Z" stroke="#111" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- 5. Synchronized Handwritten Lyric / Moment Strip -->
+        <div class="lyric-strip construct-item" style="--step: 4" id="lyricStrip">
+          <p class="lyric-line" id="lyricLine">“When I see your face, there's not a thing that I would change...”</p>
+        </div>
+
+        <!-- 6. Hand-Drawn Progress Scrubber Timeline -->
+        <div class="progress-section construct-item" style="--step: 5">
+          <div class="progress-bar-container" id="progressBarContainer" role="slider" aria-label="Progresso da música" aria-valuemin="0" aria-valuemax="237" aria-valuenow="0" tabindex="0">
+            <!-- Markers for 00:25 Heartbeat & 00:33 Video Drop -->
+            <div class="timeline-marker marker-heartbeat" style="left: 10.55%" title="00:25 - Batidas do Coração">
+              <span class="marker-icon">♥</span>
+            </div>
+            <div class="timeline-marker marker-video" style="left: 13.93%" title="00:33 - Entrada da Música & Vídeo">
+              <span class="marker-icon">★</span>
+            </div>
+
+            <!-- Hand-drawn SVG Track -->
+            <svg class="progress-track-svg" viewBox="0 0 320 20" preserveAspectRatio="none" fill="none">
+              <!-- Background sketchy track line -->
+              <path d="M4 10 Q160 8 316 10" stroke="#111" stroke-width="2" stroke-opacity="0.28" stroke-linecap="round" />
+              <path d="M4 11 Q160 12 316 10" stroke="#111" stroke-width="1.2" stroke-opacity="0.2" stroke-dasharray="4 3" stroke-linecap="round" />
+              <!-- Active filled ink line -->
+              <path id="progressFillPath" d="M4 10 Q160 8 316 10" stroke="#111" stroke-width="3.6" stroke-linecap="round" stroke-dasharray="312" stroke-dashoffset="312" />
+            </svg>
+
+            <!-- Hand-drawn Sketch Thumb -->
+            <div class="progress-thumb" id="progressThumb" style="left: 0%">
+              <svg viewBox="0 0 20 20" width="18" height="18" fill="none">
+                <circle cx="10" cy="10" r="6.5" fill="#fff" stroke="#111" stroke-width="2.5" />
+                <circle cx="10" cy="10" r="2.5" fill="#111" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="time-labels">
+            <span id="currentTimeLabel">0:00</span>
+            <span class="bpm-pill" id="bpmStatusPill">109 BPM • ♥</span>
+            <span id="durationLabel">3:56</span>
+          </div>
+        </div>
+
+        <!-- 7. Spotify Playback Controls (Hand-Drawn Animated Strokes) -->
+        <div class="controls-row construct-item" style="--step: 6">
+          <!-- Shuffle -->
+          <button class="ctrl-btn ctrl-secondary is-active" id="shuffleBtn" type="button" aria-label="Modo romântico ativo" title="Modo romântico">
+            <svg viewBox="0 0 28 28" width="22" height="22" fill="none">
+              <path class="stroke-draw" d="M4 9 C10 9, 15 19, 23 19 M19 15 L24 19 L19 23" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+              <path class="stroke-draw" d="M4 19 C10 19, 15 9, 23 9 M19 5 L24 9 L19 13" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="active-dot"></span>
+          </button>
+
+          <!-- Previous / Restart or Jump to 00:25 -->
+          <button class="ctrl-btn" id="prevBtn" type="button" aria-label="Voltar para início ou 00:25" title="Voltar">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+              <path class="stroke-draw" d="M8 7 L8 25" stroke="#111" stroke-width="2.8" stroke-linecap="round" />
+              <path class="stroke-draw" d="M24 7 L11 16 L24 25 Z" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Main Play / Pause Button -->
+          <button class="ctrl-btn ctrl-play-main" id="playPauseBtn" type="button" aria-label="Pausar ou tocar">
+            <svg class="main-play-svg" viewBox="0 0 68 68" width="66" height="66" fill="none">
+              <!-- Double-stroke hand-drawn circle -->
+              <path class="stroke-draw" d="M34 4 C51 3, 64 17, 64 34 C64 51, 50 65, 33 64 C16 63, 4 50, 4 33 C4 16, 18 5, 34 4 Z" stroke="#111" stroke-width="3" fill="#111" stroke-linecap="round" />
+              <path class="stroke-draw" d="M33 2 C52 2, 66 16, 66 35 C65 53, 51 66, 33 66 C15 66, 2 51, 2 33 C2 16, 16 2, 33 2 Z" stroke="#111" stroke-width="1.3" stroke-linecap="round" stroke-dasharray="6 4" />
+
+              <!-- Play Icon -->
+              <g id="iconPlayGroup" style="display: none">
+                <path d="M27 21 L47 34 L27 47 Z" stroke="#fff" stroke-width="2.8" fill="#fff" stroke-linejoin="round" stroke-linecap="round" />
+              </g>
+
+              <!-- Pause Icon -->
+              <g id="iconPauseGroup">
+                <path d="M26 21 L26 47" stroke="#fff" stroke-width="4.2" stroke-linecap="round" />
+                <path d="M42 21 L42 47" stroke="#fff" stroke-width="4.2" stroke-linecap="round" />
+              </g>
+            </svg>
+          </button>
+
+          <!-- Next / Jump to 00:25 Heartbeat or 00:33 Video -->
+          <button class="ctrl-btn" id="nextBtn" type="button" aria-label="Avançar para 00:25 ou 00:33" title="Avançar momento">
+            <svg viewBox="0 0 32 32" width="28" height="28" fill="none">
+              <path class="stroke-draw" d="M24 7 L24 25" stroke="#111" stroke-width="2.8" stroke-linecap="round" />
+              <path class="stroke-draw" d="M8 7 L21 16 L8 25 Z" stroke="#111" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <!-- Repeat / Loop -->
+          <button class="ctrl-btn ctrl-secondary is-active" id="repeatBtn" type="button" aria-label="Repetir música" title="Repetir sempre">
+            <svg viewBox="0 0 28 28" width="22" height="22" fill="none">
+              <path class="stroke-draw" d="M6 14 C6 9, 9 7, 14 7 L22 7 M19 4 L23 7 L19 10" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+              <path class="stroke-draw" d="M22 14 C22 19, 19 21, 14 21 L6 21 M9 18 L5 21 L9 24" stroke="#111" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span class="active-dot"></span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Audio Element -->
+    <audio id="musicAudio" src="/api/media/music" preload="auto" crossorigin="anonymous"></audio>
+  </main>
+
+  <script src="/app.js?v=3"></script>
+</body>
+</html>
